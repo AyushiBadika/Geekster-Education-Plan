@@ -11,13 +11,12 @@ export default function AddedPlan({ plan, index }) {
   }
   const increment = () => {
     setHours(Number(hours) + 1);
-    localStorageUpdate();
   };
 
   const decrement = () => {
     setHours(Number(hours) - 1);
-    localStorageUpdate();
   };
+  localStorageUpdate();
 
   useEffect(() => {}, [hours]);
   return (
