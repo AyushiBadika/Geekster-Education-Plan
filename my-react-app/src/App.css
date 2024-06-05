@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.inputFields {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+input {
+  padding: 15px;
+}
+.subject {
+  width: 200px;
+  padding-left: 15px;
+}
+.hour {
+  width: 150px;
+}
+.add,
+button {
+  width: 73px;
+  background-color: #3a83f6;
+  border: none;
+  border-radius: 2px;
+  color: white;
+}
+.add {
+  width: 80px;
+}
+input,
+button {
+  font-size: 1rem;
+}
+.addedPlan {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.addedPlan div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+button {
+  padding: 10px;
+}
