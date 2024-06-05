@@ -53,7 +53,7 @@ function EducationPlan() {
         </button>
       </div>
       {plans.map((plan, index) => {
-        return <AddedPlan plan={plan} key={index} />;
+        return <AddedPlan plan={plan} key={index} index={index} />;
       })}
     </>
   );

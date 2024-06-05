@@ -1,15 +1,25 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function AddedPlan({ plan }) {
+export default function AddedPlan({ plan, index }) {
   const [hours, setHours] = useState(plan.hour);
+
+  function localStorageUpdate() {
+    const obj = JSON.parse(localStorage.getItem("plans"));
+    obj[index].hour = hours;
+    localStorage.setItem("plans", JSON.stringify(obj));
+  }
   const increment = () => {
     setHours(Number(hours) + 1);
+    localStorageUpdate();
   };
 
   const decrement = () => {
     setHours(Number(hours) - 1);
+    localStorageUpdate();
   };
+
+  useEffect(() => {}, [hours]);
   return (
     <>
       <div className="addedPlan">
